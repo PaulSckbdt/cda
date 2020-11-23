@@ -1,8 +1,9 @@
 package animaux;
 
-import interfaces.*;
+import interfaces.Criant;
+import interfaces.Marcheur;
 
-public class Chien extends Animaux implements Criant, Marcheur, Creuser {
+public class Chien extends Animaux implements Criant, Marcheur {
 
 	public Chien(String nom) {
 		super(nom);
@@ -22,7 +23,6 @@ public class Chien extends Animaux implements Criant, Marcheur, Creuser {
 		System.out.println("Le chien marche");
 	}
 
-	@Override
 	public void creuse() {
 
 		System.out.println("Le chien creuse un trou dansle jardin");

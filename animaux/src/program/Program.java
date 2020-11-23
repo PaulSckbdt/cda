@@ -1,7 +1,11 @@
 package program;
 
-import animaux.*;
-import interfaces.*;
+import animaux.Animaux;
+import animaux.Chat;
+import animaux.Chien;
+import animaux.Sardine;
+import interfaces.Marcheur;
+import interfaces.Nageur;
 
 public class Program {
 
@@ -13,12 +17,18 @@ public class Program {
 		for (Animaux ani : animaux) {
 
 			ani.respire();
+			if (ani instanceof Marcheur) {
+				Marcheur march = (Marcheur) ani;
+				march.marche();
+			}
+			if (ani instanceof Nageur) {
+				((Nageur) ani).nage();
+			}
 
 			if (ani instanceof Chien) {
 				Chien chien = (Chien) ani;
 				chien.creuse();
 				chien.crier();
-
 			}
 			if (ani instanceof Chat) {
 				Chat chat = (Chat) ani;
@@ -28,15 +38,7 @@ public class Program {
 			}
 			if (ani instanceof Sardine) {
 				Sardine sard = (Sardine) ani;
-				sard.muet();
-				sard.nage();
 				sard.rien();
-			}
-			if (ani instanceof Marcheur) {
-				Marcheur march = (Marcheur) ani;
-
-				march.marche();
-
 			}
 
 		}

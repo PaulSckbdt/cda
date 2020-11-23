@@ -1,8 +1,9 @@
 package animaux;
 
-import interfaces.*;
+import interfaces.Criant;
+import interfaces.Marcheur;
 
-public class Chat extends Animaux implements Criant, Marcheur, Griffer {
+public class Chat extends Animaux implements Criant, Marcheur {
 
 	public Chat(String nom) {
 		super(nom);
@@ -22,7 +23,6 @@ public class Chat extends Animaux implements Criant, Marcheur, Griffer {
 		System.out.println("Le chat marche");
 	}
 
-	@Override
 	public void griffe() {
 
 		System.out.println("Le chat fait ses griffes");

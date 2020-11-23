@@ -1,18 +1,12 @@
 package animaux;
 
-import interfaces.*;
+import interfaces.Nageur;
 
-public class Sardine extends Animaux implements Muet, Nageur, Rien {
+public class Sardine extends Animaux implements Nageur {
 
 	public Sardine(String nom) {
 		super(nom);
 	
-	}
-
-	@Override
-	public void muet() {
-		System.out.println("Blop Blop Blop");
-
 	}
 
 	public void nage() {

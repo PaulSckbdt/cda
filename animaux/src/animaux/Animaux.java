@@ -1,7 +1,5 @@
 package animaux;
 
-import interfaces.*;
-
 public abstract class Animaux {
 	private final String nom;
 
